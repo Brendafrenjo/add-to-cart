@@ -1,4 +1,5 @@
 import React from "react";
+import "./AddToCart.css"
 
 export default function AddToCart(params) {
   return (
@@ -25,12 +26,10 @@ export default function AddToCart(params) {
         <input
           type="submit"
           value="Add to Cart"
-          className="btn btn-primary searcch-btn"
+          className="btn btn-primary searcch-btn w-100"
         />
-          </form>
-          <p>
-              No items here yet...
-          </p>
+      </form>
+      <p>No items here yet...</p>
     </div>
   );
 }
