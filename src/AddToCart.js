@@ -1,21 +1,12 @@
 import React from "react";
 import "./AddToCart.css";
-import AddToCartImage from "./AddToCartImage";
+import Images from "./Images";
 
 export default function AddToCart(params) {
   return (
     <div className="AddToCart">
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-         <AddToCartImage />
+      <Images />
       <form>
         <input
           type="search"
