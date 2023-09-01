@@ -9,4 +9,10 @@
 
 .searcch-btn {
   background-color: #66bfbf;
+  border: 1px solid #d94b84;
+}
+
+.searcch-btn:hover {
+  background-color: #D94B84;
+  border: 1px solid #66bfbf;
 }
