@@ -4,10 +4,11 @@ import Images from "./Images";
 
 export default function AddToCart() {
   const [item, setItem] = useState(" ");
+  const [message, setMessage] = useState(" ");
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`Searching ${item}`);
+    alert(`Searching for ${item}`);
   }
 
   function updateItem(event) {
@@ -26,9 +27,7 @@ export default function AddToCart() {
           onChange={updateItem}
           className="form-control shadow search-item w-100 text-center"
         />
-      </form>
-      <br />
-      <form>
+        <br />
         <input
           type="submit"
           value="Add to Cart"
