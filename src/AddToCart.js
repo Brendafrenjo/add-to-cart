@@ -4,11 +4,11 @@ import Images from "./Images";
 
 export default function AddToCart() {
   const [item, setItem] = useState(" ");
-  const [message, setMessage] = useState(" ");
+  const [message, setMessage] = useState(`No items here yet...`);
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`Searching for ${item}`);
+    setMessage(`${item}`);
   }
 
   function updateItem(event) {
@@ -35,7 +35,7 @@ export default function AddToCart() {
         />
       </form>
       <br />
-      <p>No items here yet...</p>
+      <p>{message}</p>
     </div>
   );
 }
