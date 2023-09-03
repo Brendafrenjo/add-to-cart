@@ -18,6 +18,7 @@ export default function AddToCart() {
   return (
     <div className="AddToCart">
       <br />
+      <i class="fa-solid fa-cart-shopping"></i>
       <Images />
       <form onSubmit={handleSubmit}>
         <input
