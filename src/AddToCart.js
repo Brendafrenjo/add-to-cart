@@ -18,7 +18,9 @@ export default function AddToCart() {
   return (
     <div className="AddToCart">
       <br />
-      <i class="fa-solid fa-cart-shopping"></i>
+      <br />
+      <br />
+      <i class="fa-solid fa-cart-shopping fa-bounce icon"></i>
       <Images />
       <form onSubmit={handleSubmit}>
         <input
@@ -36,7 +38,7 @@ export default function AddToCart() {
         />
       </form>
       <br />
-      <p>{message}</p>
+      <p className="items">{message}</p>
     </div>
   );
 }

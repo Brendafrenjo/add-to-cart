@@ -13,6 +13,12 @@
 }
 
 .searcch-btn:hover {
-  background-color: #D94B84;
+  background-color: #d94b84;
   border: 1px solid #66bfbf;
+}
+
+.icon {
+  color: #66bfbf;
+  font-size: 120px;
+  padding-left: 30px;
 }
