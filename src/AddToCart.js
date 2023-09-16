@@ -5,7 +5,7 @@ import { createStore } from "redux";
 import { Provider, connect, useSelector, useDispatch } from "react-redux";
 
 const countReducer = function (state = 0, action) {
-  switch ((action, type)) {
+  switch (action.type) {
     case "ADD":
       return state + 1;
     case "SUBTRACT":
@@ -31,7 +31,13 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const Component = ({ count, add, subtract }) => {
-  return <h1>Count = {count}</h1>;
+  return (
+    <div>
+      <h1>Count = {count}</h1>
+      <button onClick={add}>Add</button>
+      <button onClick={add}>Subtract</button>
+    </div>
+  );
 };
 
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
@@ -54,8 +60,6 @@ export default function AddToCart() {
       <Provider store={store}>
         <Container />
       </Provider>
-      <button onClick={add}>Add</button>
-      <button onClick={add}>Subtract</button>
       <br />
       <br />
       <br />
