@@ -35,7 +35,7 @@ const Component = ({ count, add, subtract }) => {
     <div>
       <h1>Count = {count}</h1>
       <button onClick={add}>Add</button>
-      <button onClick={add}>Subtract</button>
+      <button onClick={subtract}>Subtract</button>
     </div>
   );
 };

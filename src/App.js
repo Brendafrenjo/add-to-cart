@@ -1,5 +1,6 @@
 import "./App.css";
 import AddToCart from "./AddToCart";
+import { connect } from "react-redux";
 
 function App() {
   return (
@@ -13,4 +14,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    items: state.items
+  };
+};
+
+export default connect(mapStateToProps) (App);
