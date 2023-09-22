@@ -1,9 +1,9 @@
 import "./App.css";
 import AddToCart from "./AddToCart";
 import { connect } from "react-redux";
-import React from "react";
+import React, { useState } from "react";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <div className="container">

@@ -1,25 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Item from "./Item";
 
-class ItemContainer extends Component {
-  render() {
-    const listItems = props.items.map((item, index) => (
-      <Item item={item} key={index} />
-    ));
+function ItemContainer(props) {
+  useEffect(() => {}, []);
 
-    return (
-      <div style={styles}>
-        <h2>Item Container</h2>
-        {listItems}
-      </div>
-    );
+  function listItems() {
+    return props.items.map((item, index) => <Item item={item} key={index} />);
   }
+
+  return (
+    <div style={styles}>
+      <h2>Item Container</h2>
+      {listItems}
+    </div>
+  );
 }
 
-const mapStateToProps = (state) => {
-  return { items: state.reminder };
-};
+function mapStateToProps(state) {
+  return { items: state.item };
+}
 
 export default connect(mapStateToProps)(ItemContainer);
 
