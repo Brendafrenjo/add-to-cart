@@ -9,7 +9,7 @@ function App(props) {
     <div className="App">
       <div className="container">
         <div className="add-to-cart-app">
-          <ItemContainer />
+          <AddToCart />
         </div>
       </div>
     </div>
