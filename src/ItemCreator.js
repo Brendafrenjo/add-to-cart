@@ -6,7 +6,7 @@ function ItemCreator(props) {
   const [text, setText] = useState("");
 
   function handleChange(event) {
-    return setText(event.target.value);
+    setText(event.target.value);
   }
 
   function handleSubmit(event) {
@@ -17,6 +17,8 @@ function ItemCreator(props) {
 
   return (
     <div>
+      <i class="fa-solid fa-cart-shopping fa-bounce icon"></i>
+      <Images />
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={handleChange} value={text} />
         <input type="submit" value="Create" />
