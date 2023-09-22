@@ -1,4 +1,6 @@
-function itemsReducer(state = { items: [] }, action) {
+const initialState = { items: [] };
+
+function itemsReducer(state = initialState, action) {
   switch (action.type) {
     case "ADD_ITEM":
       return {
