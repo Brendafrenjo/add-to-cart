@@ -2,23 +2,16 @@ import React from "react";
 import { connect } from "react-redux";
 import { deleteItem } from "./action";
 
-const Item = (props) => {
-  return (
-    <div>
-      <li>
-        {props.item}
-        <button onClick={deleteItem}>Delete</button>
-      </li>
-    </div>
-  );
-};
-
 function Item(props) {
+  function handleDelete() {
+    props.deleteItem(props.item);
+  }
+
   return (
     <div>
       <li>
         {props.item}
-        <button onClick={deleteItem}>Delete</button>
+        <button onClick={handleDelete}>Delete</button>
       </li>
     </div>
   );
