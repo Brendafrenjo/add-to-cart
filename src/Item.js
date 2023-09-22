@@ -13,10 +13,21 @@ const Item = (props) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => {
+function Item(props) {
+  return (
+    <div>
+      <li>
+        {props.item}
+        <button onClick={deleteItem}>Delete</button>
+      </li>
+    </div>
+  );
+}
+
+function mapDispatchToProps(dispatch) {
   return {
     deleteItem: (item) => dispatch(deleteItem(item)),
   };
-};
+}
 
 export default connect(null, mapDispatchToProps)(Item);

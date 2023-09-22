@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addItem } from "./action";
 
@@ -11,17 +11,17 @@ class ItemCreator extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    props.addItem(state.text);
-    setState({ text: "" });
+    this.props.addItem(this.state.text);
+    this.setState({ text: "" });
   };
 
   render() {
     return (
       <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <input
             type="text"
-            onChange={handleChange}
+            onChange={this.handleChange}
             value={state.text}
           />
           <input type="submit" value="Create" />
