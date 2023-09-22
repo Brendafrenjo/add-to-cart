@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Item from "./Item";
+import "./ItemContainer.css";
 
 function ItemContainer(props) {
   useEffect(() => {}, []);
@@ -10,9 +11,9 @@ function ItemContainer(props) {
   }
 
   return (
-    <div style={styles}>
+    <div className="Item">
       <h2>Item Container</h2>
-      {listItems}
+      {listItems()}
     </div>
   );
 }
@@ -22,10 +23,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(ItemContainer);
-
-const styles = {
-  border: "2px solid black",
-  width: "40%",
-  margin: "50px",
-  padding: "20px",
-};

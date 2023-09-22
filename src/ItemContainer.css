@@ -1,0 +1,6 @@
+.ItemContainer .Item {
+  border: 2px solid black;
+  width: 40%;
+  margin: 50px;
+  padding: 20px;
+}
