@@ -1,9 +1,13 @@
-export const addItem = (text) => ({
-  type: "ADD_ITEM",
-  payload: text,
-});
+export function addItem(text) {
+  return {
+    type: "ADD_ITEM",
+    payload: text,
+  };
+}
 
-export const deleteItem = (item) => ({
-  type: "DELETE_ITEM",
-  payload: item,
-});
+export function deleteItem(item) {
+  return {
+    type: "DELETE_ITEM",
+    payload: item,
+  };
+}
