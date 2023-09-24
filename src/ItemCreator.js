@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addItem } from "./action";
+import Images from "./Images";
+import "./ItemCreator.css"
 
 function ItemCreator(props) {
   const [text, setText] = useState("");
-
+  
   function handleChange(event) {
     setText(event.target.value);
   }
@@ -17,11 +19,25 @@ function ItemCreator(props) {
 
   return (
     <div>
+      <br />
+      <br />
+      <br />
       <i class="fa-solid fa-cart-shopping fa-bounce icon"></i>
       <Images />
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} value={text} />
-        <input type="submit" value="Create" />
+        <input
+          type="text"
+          onChange={handleChange}
+          value={text}
+          autoFocus="on"
+          placeholder="Type item..."
+          className="form-control shadow search-item w-100 text-center"
+        />
+        <input
+          type="submit"
+          value="Add to Cart"
+          className="btn btn-primary searcch-btn w-100"
+        />
       </form>
     </div>
   );

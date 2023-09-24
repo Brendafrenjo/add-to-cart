@@ -1,15 +1,14 @@
 import "./App.css";
-import AddToCart from "./AddToCart";
 import { connect } from "react-redux";
 import React, { useState } from "react";
-import ItemContainer from "./ItemContainer";
+import ItemCreator from "./ItemCreator";
 
 function App(props) {
   return (
     <div className="App">
       <div className="container">
         <div className="add-to-cart-app">
-          <AddToCart />
+          <ItemCreator />
         </div>
       </div>
     </div>
