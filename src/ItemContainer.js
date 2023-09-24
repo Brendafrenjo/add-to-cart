@@ -5,10 +5,6 @@ import "./ItemContainer.css";
 import { addItem, deleteItem } from "./action";
 
 function ItemContainer(props) {
-  useEffect(() => {
-    props.fetchItems(); 
-  }, []);
-
   function listItems() {
     return props.items.map((item, index) => <Item item={item} key={index} />);
   }
