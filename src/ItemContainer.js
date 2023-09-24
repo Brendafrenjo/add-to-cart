@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Item from "./Item";
 import "./ItemContainer.css";
-import { fetchItems } from "./action";
-import { addItem, deleteItem, fetchItems } from "./action";
+import { addItem, deleteItem } from "./action";
 
 function ItemContainer(props) {
   useEffect(() => {
@@ -27,7 +26,6 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-  fetchItems,
   deleteItem,
   addItem,
 };
