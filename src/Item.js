@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { deleteItem } from "./action";
+import "./Item.css"
 
 function Item(props) {
   function handleDelete() {
@@ -8,11 +9,8 @@ function Item(props) {
   }
 
   return (
-    <div>
-      <li>
-        {props.item}
-        <button onClick={handleDelete}>Delete</button>
-      </li>
+    <div className="items">
+      <button onClick={handleDelete}>{props.item}</button>
     </div>
   );
 }

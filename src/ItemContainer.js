@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import Item from "./Item";
-import "./ItemContainer.css";
 import { addItem, deleteItem } from "./action";
 
 function ItemContainer(props) {
@@ -11,14 +10,14 @@ function ItemContainer(props) {
 
   return (
     <div className="Item">
-      <h2>Item Container</h2>
+      <p className="pt-3">Add list below: </p>
       {listItems()}
     </div>
   );
 }
 
 function mapStateToProps(state) {
-  return { items: state.item };
+  return { items: state.items };
 }
 
 const mapDispatchToProps = {
