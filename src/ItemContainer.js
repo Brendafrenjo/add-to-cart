@@ -2,9 +2,13 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Item from "./Item";
 import "./ItemContainer.css";
+import { fetchItems } from "./action";
+import { addItem, deleteItem, fetchItems } from "./action";
 
 function ItemContainer(props) {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    props.fetchItems(); 
+  }, []);
 
   function listItems() {
     return props.items.map((item, index) => <Item item={item} key={index} />);
@@ -22,4 +26,10 @@ function mapStateToProps(state) {
   return { items: state.item };
 }
 
-export default connect(mapStateToProps)(ItemContainer);
+const mapDispatchToProps = {
+  fetchItems,
+  deleteItem,
+  addItem,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ItemContainer);
