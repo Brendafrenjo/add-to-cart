@@ -2,12 +2,7 @@ import "./App.css";
 import { connect } from "react-redux";
 import React from "react";
 import ItemCreator from "./ItemCreator";
-import { createStore } from "redux";
-import itemsReducer from "./reducer";
 import ItemContainer from "./ItemContainer";
-
-const store = createStore(itemsReducer);
-
 
 function App() {
   return (
